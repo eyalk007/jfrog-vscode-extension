@@ -17,7 +17,8 @@ octokit.repos
         const contentLength = fs.statSync(vsixFilePath).size;
         
         core.info('Uploading ' + vsixFileName);
-        await octokit.rest.repos.uploadReleaseAsset({
+        await octokit.repos.uploadReleaseAsset({
+
             owner: 'jfrog',
             repo: 'jfrog-vscode-extension',
             release_id: release.id,
